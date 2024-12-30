@@ -22,7 +22,7 @@ The Rastrigin function is a mathematical benchmark considered particularly chall
 
 $$ f(x) = An + \sum_{i=1}^n [x_{i}^{2} - A cos(2 \pi x_{i})] $$
 
-With a = 10. The figure below shows a heatmap of the Rastrigin function on a two-dimensional space. Darker colors indicate smaller error values. 
+With A = 10. The figure below shows a heatmap of the Rastrigin function on a two-dimensional space. Darker colors indicate smaller error values. 
 
 ![](./implementation/plots/grid_search.svg)
 
