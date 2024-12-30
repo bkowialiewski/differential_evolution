@@ -2,14 +2,14 @@
 
 ## Introduction
 
-Differential Evolution is a global minimization algorithm (see Storn & Price, 1997), which iteratively generates new candidate solutions based on the goodness-of-fit of previous populations. Its main advantages include: (1) its versatility, as it can be applied to a wide range of problems, and (2) avoiding falling into local minima.
+Differential Evolution is a global minimization algorithm (see Storn & Price, 1997), which iteratively generates new candidate solutions based on the goodness-of-fit of previous populations. I regularly use this algorithm to fit the computational models I run for my studies on working memory. Its main advantages include: (1) its versatility, as it can be applied to a wide range of problems, and (2) avoiding falling into local minima.
 
 The purpose of the present project is to test the efficiency of this algorithm against a benchmark function: Rastrigin.
 
 ## Differential Evolution
 
 The standard algorithm is implemented by following these steps:
-1. Initialize a population of individuals $NP$, generaly set to $10n$, with $$n$$ being the number of parameters of the to-be-fitted function.
+1. Initialize a population of individuals $NP$, generally set to $10n$, with $$n$$ being the number of parameters of the to-be-fitted function.
 2. Evaluate the goodness-of-fit of each individual in the population.
 3. Generate a new population of individuals.
 * For each individual in the old population, select three individuals from the old population at random and combine them.
@@ -18,7 +18,11 @@ The standard algorithm is implemented by following these steps:
 
 ## Rastrigin
 
-The Rastrigin function is a mathematical benchmark considered particularly challenging to minimize due to its numerous local minima. Its parameters are bounded between -5.12 and 5.12. The Rastrigin function has its global minimum at $x = 0.0$ with $f(x)=0.0$. The figure below shows a heatmap of the Rastrigin function on a two-dimensional space. Darker colors indicate smaller error values. 
+The Rastrigin function is a mathematical benchmark considered particularly challenging to minimize due to its numerous local minima. Its parameters are bounded between -5.12 and 5.12. The Rastrigin function has its global minimum at $x = 0.0$ with $f(x)=0.0$. The function is written as:
+
+$$ f(x) = An + \sum_{i=1}^n ([x_{i}^{2.0} - A cos(2.0 \pi x_{i})]) $$
+
+The figure below shows a heatmap of the Rastrigin function on a two-dimensional space. Darker colors indicate smaller error values. 
 
 ![](./implementation/plots/grid_search.svg)
 
@@ -26,7 +30,7 @@ And here is a 3D representation to help visualization:
 
 ![](./implementation/plots/3D.svg)
 
-The function depicted above has two dimensions. If we make a parallel with a situation in which we try to find the global minimum of a model, this corresponds to a situation where the model has two free parameters. However, in practice, models can have many more free parameters. The two-dimensional Rastrigin function was chosen only for illustrative purposes. The function can be extended to have as many dimensions as we want it to.
+The function depicted above has two dimensions. If we make a parallel with a situation in which we try to find the global minimum of a model, this corresponds to a case where the model has two free parameters. However, in practice, models can have many more free parameters. The two-dimensional Rastrigin function was chosen only for illustrative purposes. The function can be extended to have as many dimensions as we want it to.
 
 ## Method & results
 
