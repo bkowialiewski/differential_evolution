@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Differential evolution is a global minimization algorithm (see Storn & Price, 1997), which iteratively generates new candidate solutions based on the goodness-of-fit of previous populations. Its main advantages include: (1) its versatility, as it can be applied to a wide range of problems, and (2) avoiding falling into local minima.
+Differential Evolution is a global minimization algorithm (see Storn & Price, 1997), which iteratively generates new candidate solutions based on the goodness-of-fit of previous populations. Its main advantages include: (1) its versatility, as it can be applied to a wide range of problems, and (2) avoiding falling into local minima.
 
 The purpose of the present project is to test the efficiency of this algorithm against a benchmark function: Rastrigin.
 
@@ -40,4 +40,4 @@ The figure below shows the distribution of errors produced by the 1,000 fits (le
 
 ![](./implementation/plots/histogram.svg)
 
-Differential Evoltuion provides a simple but efficient way of finding very good parameter values for a very complex problem, such as the Rastrigin function. By extension, I expect this algorithm to be particularly efficient to fit a model to empirical data, as it is commonly done in computational modeling of human cognition.
+Differential Evolution provides a simple but efficient way of finding very good parameter values for a very complex problem, such as the Rastrigin function. By extension, I expect this algorithm to be particularly efficient to fit a model to empirical data, as it is commonly done in computational modeling of human cognition.
