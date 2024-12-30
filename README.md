@@ -20,7 +20,7 @@ The standard algorithm is implemented by following these steps:
 
 The Rastrigin function is a mathematical benchmark considered particularly challenging to minimize due to its numerous local minima. Its parameters are bounded between -5.12 and 5.12. The Rastrigin function has its global minimum at $x = 0.0$ with $f(x)=0.0$. The function is written as:
 
-$$ f(x) = An + \sum_{i=1}^n ([x_{i}^{2.0} - A cos(2.0 \pi x_{i})]) $$
+$$ f(x) = An + \sum_{i=1}^n [x_{i}^{2} - A cos(2 \pi x_{i})] $$
 
 The figure below shows a heatmap of the Rastrigin function on a two-dimensional space. Darker colors indicate smaller error values. 
 
